@@ -72,10 +72,16 @@ for n,marks in total_marks.items():
 print(f'Highest Scorer student {name} : marks {highestScore}')
 
 #Sort and display the students based on their total marks from highest to lowest.
-#sorted_dict = {key: val for key, val in sorted(total_marks.items(),key = lambda item : item[1], reverse=True)}
-#print(sorted_dict)
+#sorted_dict = {key:val for key,val in sorted(total_marks.items(),key = lambda item : item[1], reverse=True)}
+sorted_items = sorted(total_marks.items(),key = lambda item : item[1], reverse=True)
+print(type(sorted_items))
+sorted_dict = dict(sorted_items)
+print(sorted_dict)
 
-myvalues = list(total_marks.values())
-myvalues.sort()
-myvalues.reverse()
-print(myvalues)
+# myvalues = list(total_marks.values())
+# myvalues.sort(reverse=True)
+# myvalues.reverse()
+# print(myvalues)
+
+
+
