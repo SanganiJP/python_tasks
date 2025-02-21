@@ -1,4 +1,4 @@
-def update_student(std_Name,std_Age,std_School,std_fees,std_city):
+def update_student(std_Name,std_Age,std_School,std_city,std_fees = 20000):
     std_details = {
         'std_Name':std_Name,
         'std_Age':std_Age,
@@ -43,7 +43,7 @@ while is_need:
     std_fees = input("Enter your school fees:")
     std_city = input("Enter your city name:")
 
-    sd = update_student(std_Name, std_Age, std_School, std_fees, std_city)
+    sd = update_student(std_Name=std_Name, std_Age=std_Age, std_School=std_School, std_fees=std_fees, std_city=std_city)
     students_data.append(sd)
 
     is_stop = input('Do you want to stop?y/n:')
