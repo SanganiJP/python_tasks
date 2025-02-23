@@ -1,20 +1,12 @@
 def find_high_performer(marketing_performance):
-    performanse = 0
-    chennle=''
-    for key,val in marketing_performance.items():
-        if performanse < val:
-            chennle=''
-            performanse = val
-            chennle += key
+    data=max(marketing_performance.items(), key= lambda i:i[1])
+    chennle = data[0]
+    performanse = data[1]
     return f'{chennle}({performanse}%)'
 
 def average_conversion_rate(marketing_performance):
-    avg=0
-    chennle = 0
-    for val in marketing_performance.values():
-        avg += val
-        chennle +=1
-    return f'{avg/chennle}%'
+    avg = sum(marketing_performance.values())/len(marketing_performance)
+    return f'{avg}%'
 
 marketing_performance = {
     "Facebook Ads": 3.2,

@@ -1,26 +1,16 @@
 def avg_ratings(movie_ratings):
-    tm = len(movie_ratings)
-    tr = 0
-    for val in movie_ratings.values():
-        tr += val
-    return round(tr/tm,2)
+    avg = sum(movie_ratings.values())/len(movie_ratings)
+    return round(avg,2)
 
 def highest_rated(movie_ratings):
-    maX_rate = 0
-    movie_name = ''
-    for mn,mr in movie_ratings.items():
-        if maX_rate < mr:
-            movie_name=''
-            maX_rate = mr
-            movie_name += mn
+    data = max(movie_ratings.items(),key=lambda m:m[1])
+    maX_rate = data[1]
+    movie_name = data[0]
     return movie_name,maX_rate
 
 def find_top_performer():
-    tp_lst=[]
-    for i in range(3):
-        mn,mr = highest_rated(movie_ratings)
-        tp_lst.append(highest_rated(movie_ratings))
-        movie_ratings.pop(mn)
+    lst=list(sorted(movie_ratings.items(), key=lambda i:i[1],reverse=True))
+    tp_lst = lst[:3]
     return tp_lst
 
 movie_ratings = {

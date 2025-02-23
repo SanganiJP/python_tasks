@@ -1,23 +1,10 @@
 def most_common_complaint(complaints):
-    high = 0
-    name = ''
-    for key,val in complaints.items():
-        if high<val:
-            name=''
-            high=val
-            name += key
-    return name
-
-def total_complaint(complaints):
-    total_complaint = 0
-    for val in complaints.values():
-        total_complaint += val
-    return total_complaint
+    return max(complaints.items(),key=lambda item:item[1])[0]
 
 def complaint_percentage(complaints):
     cp={}
     for key,val in complaints.items():
-        cp[key] = f'{(val/total_complaint(complaints))*100}%'
+        cp[key] = f'{(val/sum(complaints.values()))*100}%'
     return cp
 
 complaints = {

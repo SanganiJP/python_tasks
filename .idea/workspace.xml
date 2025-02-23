@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5d87d583-5288-475f-b002-59fcdc1e15ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day03.py" beforeDir="false" afterPath="$PROJECT_DIR$/day03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem01.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem02.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem03.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem04.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem05.py" beforeDir="false" afterPath="$PROJECT_DIR$/problem05.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,23 +35,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.01_hello.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03_hello.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04_dict.executor&quot;: &quot;Run&quot;,
-    &quot;Python.day03.executor&quot;: &quot;Run&quot;,
-    &quot;Python.function.executor&quot;: &quot;Run&quot;,
-    &quot;Python.functionargs.executor&quot;: &quot;Run&quot;,
-    &quot;Python.problem01.executor&quot;: &quot;Run&quot;,
-    &quot;Python.problem06.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dict__Task&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jayesh/workspace/python_tasks&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.01_hello.executor": "Run",
+    "Python.03_hello.executor": "Run",
+    "Python.04_dict.executor": "Run",
+    "Python.day03.executor": "Run",
+    "Python.function.executor": "Run",
+    "Python.functionargs.executor": "Run",
+    "Python.problem01.executor": "Run",
+    "Python.problem02.executor": "Run",
+    "Python.problem03.executor": "Run",
+    "Python.problem04.executor": "Run",
+    "Python.problem05.executor": "Run",
+    "Python.problem06.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Dict__Task",
+    "last_opened_file_path": "/home/jayesh/workspace/python_tasks",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -23,15 +23,6 @@ def max_mark_per_sub(students):
     this function return dictionary where we store subject with highest marks
     """
     maxmarkpersub = {}
-    # max_markpersub = {}
-    # for key,v in students.items():
-    #     student,subject = key.split("-")
-    #     if subject in max_markpersub:
-    #         if max_markpersub[subject][1]<v:
-    #             max_markpersub[subject] = (student,v)
-    #     else:
-    #         max_markpersub[subject] = (student,v)
-
     std = {}
     for key,val in students.items():
         student = key.split("-")[0]
@@ -52,8 +43,9 @@ def find_max(total_marks):
     This function iterate through total_marks dictionary and return
     highest scorer student name and mark
     """
-    stdudent = max(total_marks.items(), key=lambda i: i[1])[0]
-    maxmark = max(total_marks.items(), key=lambda i: i[1])[1]
+    data = max(total_marks.items(), key=lambda i: i[1])
+    stdudent = data[0]
+    maxmark = data[1]
     return stdudent,maxmark
 
 def std_dict(total_marks):
@@ -94,6 +86,6 @@ print(f'Task 3: Student has the highest total marks:- Name:{high_scorer_std},obt
 std,sub_mark = max_mark_per_sub(students)
 print(f'Task 4: Subject-wise Highest Marks : {sub_mark}')
 print(f'Task 5: Subject-wise Highest Marks with student name : {std}')
-# print(f'Task 5: Sorted Dictionary:{std_dict(total_marks)}')
+print(f'Task 5: Sorted Dictionary:{std_dict(total_marks)}')
 
 
