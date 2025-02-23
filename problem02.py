@@ -1,19 +1,12 @@
 def highest_seller(employee_sales):
-    high=0
-    name=''
-    for key,val in employee_sales.items():
-        if high<val:
-            name=''
-            high = val
-            name += key
-    return name,high
+    data = max(employee_sales.items(), key= lambda item : item[1])
+    name = data[0]
+    sales = data[1]
+    return name,sales
 
 def top_seller():
-    lst = []
-    for emp in range(3):
-        sellerName, high = highest_seller(employee_sales)
-        lst.append(highest_seller(employee_sales))
-        employee_sales.pop(sellerName)
+    data =sorted(employee_sales.items(), key=lambda i:i[1], reverse=True)
+    lst = data[:3]
     return lst
 
 employee_sales = {
@@ -26,13 +19,5 @@ employee_sales = {
 
 sellerName = highest_seller(employee_sales)
 print(f'Top Performer:{sellerName}')
-print(top_seller())
+print(f'Top 3 Performer:{top_seller()}')
 
-
-# lst.append(highest_seller(employee_sales))
-# sellerName,high = highest_seller(employee_sales)
-# employee_sales.pop(sellerName)
-#
-# lst.append(highest_seller(employee_sales))
-# sellerName,high = highest_seller(employee_sales)
-# employee_sales.pop(sellerName)
