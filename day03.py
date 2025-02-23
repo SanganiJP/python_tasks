@@ -37,7 +37,7 @@ for key,val in mydict.items():
         total_marks[name] += val
         sub[name] += 1
         #count += 1
-        avg_marks[name] = total_marks.get(name)/sub.get(name)
+        avg_marks[name] = round(total_marks.get(name)/sub.get(name),2)
 
     else:
         total_marks[name] = val
@@ -77,6 +77,7 @@ sorted_items = sorted(total_marks.items(),key = lambda item : item[1], reverse=T
 print(type(sorted_items))
 sorted_dict = dict(sorted_items)
 print(sorted_dict)
+print(avg_marks)
 
 # myvalues = list(total_marks.values())
 # myvalues.sort(reverse=True)
