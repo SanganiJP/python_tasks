@@ -6,12 +6,12 @@ def addbook(books):
         booktitle = input("Enter book title:")
         if booktitle not in books.keys():
             author = input("Enter name of author:")
-            quantity = input("Enter quantity of this book:")
+            quantity = int(input("Enter quantity of this book:"))
             books[booktitle] = (author, quantity)
             print("Book added successfully!")
         else:
             print("You are trying to add existing book!")
-        assignTask()
+        managertask()
     except Exception as e:
         print(e)
 
@@ -45,6 +45,7 @@ def updateinfo(books):
 def displaybook(books):
     try:
         print(f'Available Books:')
+        print(books)
         for book in books.keys():
             print(f'{book}')
         managertask()
@@ -70,35 +71,25 @@ def searchbook(books):
 User task functions
 """
 def borrow_books(books,borrowedbook,mybooks):
-    username = input("Enter your name:")
     bookname = input("Enter book name that you want to borrow:")
     if bookname not in books.keys():
         print("Currently this book is not available!")
         usertask()
     else:
         if (len(mybooks) <= 1) :
+            username = input("Enter your name:")
             brrow_date = datetime.today()
             duedate = brrow_date + timedelta(days=30)
-            if username in borrowedbook.keys():
-                mybooks[bookname] = (brrow_date.strftime("%d/%m/%y"), duedate.strftime("%d/%m/%y"))
-                borrowedbook[username] = mybooks
-                print(len(mybooks))
-                bookdata = books[bookname]
-                a = bookdata[0]
-                q = bookdata[1] - 1
-                books[bookname] = (a, q)
-                usertask()
-            else:
-                # borrowedbook[username] = {bookname:(brrow_date.strftime("%d/%m/%y"), duedate.strftime("%d/%m/%y"))}
-                mybooks[bookname] = (brrow_date.strftime("%d/%m/%y"), duedate.strftime("%d/%m/%y"))
-                borrowedbook[username] = mybooks
-                bookdata = books[bookname]
-                a = bookdata[0]
-                q = bookdata[1] - 1
-                books[bookname] = (a,q)
-                usertask()
+            mybooks[bookname] = (brrow_date.strftime("%d/%m/%y"), duedate.strftime("%d/%m/%y"))
+            borrowedbook[username] = mybooks
+            bookdata = books[bookname]
+            a = bookdata[0]
+            q = bookdata[1] - 1
+            books[bookname] = (a, q)
+            usertask()
         else:
             print("Users can only borrow a maximum of 2 books at a time.")
+            usertask()
     return borrowedbook
 
 def return_books(books,borrowedbook,mybooks):
@@ -127,7 +118,7 @@ def view_your_books(result):
         print("You don't have any book!")
         usertask()
 
-books={"math":("Jayesh",10),"eng":("Mandip",12),"python":("Bhargav",13)}
+books={"math":("jayesh",10)}
 borrowedbook = {}
 mybooks = {}
 
@@ -182,7 +173,7 @@ def managertask() :
         elif choice == 5:
             searchbook(books)
         elif choice == 6:
-           return
+           assignTask()
         else:
             print("Enter valid choice")
     except Exception as e:
@@ -198,7 +189,7 @@ def usertask():
         elif choice == 3:
             view_your_books(borrowedbook)
         elif choice == 4:
-           checkUser()
+           assignTask()
         else:
             print("Enter valid choice")
     except Exception as e:
