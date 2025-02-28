@@ -1,8 +1,6 @@
 class Employee:
     def __init__(self):
-        self.employees = [{'emp_name':'Jayesh','employee_id':1,'salary':10000,'role':'Developer','extra_info':{'Dept_name':'Development','p_language':'java'}},
-        {'emp_name':'Sanket', 'employee_id': 2, 'salary': 20000, 'role': 'Manager', 'extra_info': {'Dept_name': 'Development', 'p_language': 'java'}}
-        ]
+        self.employees = []
 
     def employee_creation(self):
         emp_roles = ["Developer","Manager"]
